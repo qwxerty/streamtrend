@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply transition-colors duration-300;
+}
+
+.card {
+  @apply bg-gray-800/80 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-cyan-500 text-white hover:from-purple-700 hover:to-cyan-600 shadow-lg;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.input {
+  @apply border border-gray-600 rounded-xl p-4 w-full bg-gray-800/50 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
